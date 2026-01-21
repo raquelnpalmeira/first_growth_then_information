@@ -56,6 +56,19 @@ The following functions implement individual molecular processes used by `model_
 
 - **`pop_cat_fun.m`**  
   Computes catalytic contributions from peptide populations to CO₂ fixation and templated polymerisation.
+  
+---
+  ### Autotrophic vs heterotrophic growth (model variants)
+
+The code switches between the autotrophoc and heterotrophic models via the `cat_c` flag in `model_fun.m`:
+
+- **`cat_c = 1` (autotrophic model):**  
+  Peptide catalysis enhances CO₂ fixation, increasing the production of nucleotides, amino acids, and fatty acids used for protocell growth.
+
+- **`cat_c = 2` (heterotrophic / unlinked model):**  
+  Peptide catalysis affects protocell growth (size variable `S`) but does not affect the intake of nucleotides or amino acids, which are supplied at fixed baseline rates.
+
+The model variant used in a given simulation is specified by the value of `cat_c` passed to `testMatlabFunction`.
 
 ---
 
