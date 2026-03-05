@@ -1,4 +1,4 @@
-function [] = testMatlabFunction(n, n_gen, AA_min, N_min, S_min, p_p_min, p_c_min, p_t_min, p_d, cat_c, cat_p, w, gamma, gamma2, epsilon, alpha,beta, er, min_length_for_avg,reps)
+function [] = run_simulation(n, n_gen, AA_min, N_min, S_min, p_p_min, p_c_min, p_t_min, p_d, cat_c, cat_p, w, gamma, gamma2, epsilon, alpha,beta, er, min_length_for_avg,reps)
 
 
 tic
