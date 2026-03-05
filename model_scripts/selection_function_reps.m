@@ -22,7 +22,7 @@ p_c_vec_vec = cell(1,reps);
 
 %parfor (i = 1:reps, M)
 for i = 1:reps
-[n_m_mat_reps{1,i}, div_per_gen_reps{1,i}, n_pops_reps{1,i}, aa_pops_reps{1,i}, s_pops_reps{1,i}, k_avg_vec{1,i}, avg_length_long_vec{1,i}, N_m_vec_vec{1,i}, p_c_vec_vec{1,i}] = selection_function_test(n, n_gen, AA_min, N_min, S_min, p_p_min, p_c_min, p_t_min,p_d,cat_c, cat_p, w,gamma, gamma2, epsilon, alpha, beta,er, min_length_for_avg);
+[n_m_mat_reps{1,i}, div_per_gen_reps{1,i}, n_pops_reps{1,i}, aa_pops_reps{1,i}, s_pops_reps{1,i}, k_avg_vec{1,i}, avg_length_long_vec{1,i}, N_m_vec_vec{1,i}, p_c_vec_vec{1,i}] = selection_function(n, n_gen, AA_min, N_min, S_min, p_p_min, p_c_min, p_t_min,p_d,cat_c, cat_p, w,gamma, gamma2, epsilon, alpha, beta,er, min_length_for_avg);
 end 
 
 
