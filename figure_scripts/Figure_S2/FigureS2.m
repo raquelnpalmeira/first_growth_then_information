@@ -4,7 +4,7 @@
 
 
 
-outputs = {output,output1};%, output1, output2, output3};%, output3, output4};%{job61_output, job60_output, job59_output};%{output, output2, output3};%
+outputs = {data_pc_001,data_pc_1};%, output1, output2, output3};%, output3, output4};%{job61_output, job60_output, job59_output};%{output, output2, output3};%
 
 %%%% FIRST PLOT TIMESERIES
 legends = {'p_c = 0.001', 'p_c = 0.1'};
@@ -15,7 +15,7 @@ tiledlayout(3,3);
 
 
 
-outputs = {output,output1};%, output1, output2, output3};%, output3, output4};%{job61_output, job60_output, job59_output};%{output, output2, output3};%
+outputs = {data_pc_001,data_pc_1};%, output1, output2, output3};%, output3, output4};%{job61_output, job60_output, job59_output};%{output, output2, output3};%
 
 %%%% FIRST PLOT TIMESERIES
 legends = {'p_c = 0.001', 'p_c = 0.1'};
@@ -24,7 +24,7 @@ tiledlayout(3,3);
 ax1 = nexttile([1 3]); %create tile that spams 1 row by 3 columns
 
 for j = 1:length(outputs)
-div_per_gen_reps = outputs{j}{1,2};
+div_per_gen_reps = outputs{j}{1,1};
 
 
 n_gen = length(div_per_gen_reps{1,1});
@@ -77,7 +77,7 @@ avg_cells_at_nth_snapshot = cell(snps,length(outputs));
 
 
 for i = 1:length(outputs)
-    nucs_snapshot_cells_reps = outputs{1,i}{1,3}; % First curly brackets says which bit of data (i.e. output of which parameter), and the second index (set as 3) tells us to get the snapshot cell compositions
+    nucs_snapshot_cells_reps = outputs{1,i}{1,2}; % First curly brackets says which bit of data (i.e. output of which parameter), and the second index (set as 3) tells us to get the snapshot cell compositions
     for k = 1:snps
     for j = 1:reps
         nucs_snapshot_cells_nth_rep = nucs_snapshot_cells_reps{j};
