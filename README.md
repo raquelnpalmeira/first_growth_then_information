@@ -1,6 +1,6 @@
 # Protocell evolution model (MATLAB)
 
-This repository contains the MATLAB implementation of the individual-based protocell model described in *First Growth, then information: the path to genetic heredity in protocells*.  
+This repository contains the MATLAB implementation of the individual-based protocell model described in *The emergence of genetic heredity in protocells: first growth then information*.  
 
 
 ---
