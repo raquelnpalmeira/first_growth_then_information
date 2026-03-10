@@ -10,13 +10,13 @@ This repository contains the MATLAB implementation of the individual-based proto
 
 Simulations are launched via:
 
-- **`testMatlabFunction.m`**  
+- **`run_simulation.m`**  
   Top-level entry point. Runs a full simulation for a given parameter set and number of stochastic replicates, saving all outputs to disk.
 
 - **`selection_function_reps.m`**  
   Repeats the same parameter set across multiple independent stochastic replicates.
 
-- **`selection_function_test.m`**  
+- **`selection_function.m`**  
   Runs a single simulation trajectory for a population of protocells, handling time stepping, data recording, and protocell division.
 
 ---
