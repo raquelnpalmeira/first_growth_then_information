@@ -2,12 +2,12 @@
 
 figure()
 tiledlayout(2,3);
-legends = {' \itp_d \rm= 0.01',' \itp_d \rm= 0.001', ' \itp_d \rm= 0.0001'};
+legends = {' \itp_t \rm= 0.01',' \itp_t \rm= 0.001', ' \itp_t \rm= 0.0001'};
 
 
 %%  Timecourse
 
-outputs = {data_pd_01,data_pd_001,data_pd_0001};
+outputs = {data_pt_01,data_pt_001,data_pt_0001};
 
 %%%% FIRST PLOT TIMESERIES
 

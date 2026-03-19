@@ -1,17 +1,17 @@
-% Figure S3
+% Figure S5
 
 figure()
-tiledlayout(2,3);
-legends = {' \itp_t \rm= 0.01',' \itp_t \rm= 0.001', ' \itp_t \rm= 0.0001'};
+tiledlayout(2,4);
+legends = {' \gamma = 4',' \gamma = 6',' \gamma = 8',' \gamma = 10'};
 
 
 %%  Timecourse
 
-outputs = {data_pt_01,data_pt_001,data_pt_0001};
+outputs = {data_gamma_4,data_gamma_6,data_gamma_8,data_gamma_10};
 
 %%%% FIRST PLOT TIMESERIES
 
-ax1 = nexttile([1 3]); %create tile that spams 1 row by 3 columns
+ax1 = nexttile([1 4]); %create tile that spams 1 row by 3 columns
 
 for j = 1:length(outputs)
 div_per_gen_reps = outputs{j}{1,1};
@@ -49,7 +49,7 @@ xlabel(['time steps'],'Fontsize',20,'FontName', 'Times');
 hold on
 end
 xline(ax1,8000,'--','Color','red', 'LineWidth', 2); % add vertical line
-legend({' \itp_t \rm= 0.01',' \itp_t \rm= 0.001', ' \itp_t \rm= 0.0001'}, 'Fontsize', 20,'FontName', 'Times', 'Location', 'west');
+legend({' \gamma = 4',' \gamma = 6',' \gamma = 8',' \gamma = 10'}, 'Fontsize', 20,'FontName', 'Times', 'Location', 'west');
 xlim([0,10000-interval_for_moving_sum]);
 %text(115, 245,'\it{(c)}', 'FontSize',20,'FontName', 'Times'); % This adds the "A" to the top left hand corner of the plot
 

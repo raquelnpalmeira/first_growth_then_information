@@ -1,18 +1,18 @@
 
-%% Figure S6
+%% Figure S7
 
 figure()
-tiledlayout(2,2);
+tiledlayout(2,4);
 
 
 %%  Timecourse
 
-data = {data_6828,data_8682};
+data = {data_6828_01, data_6828_04, data_6828_08,data_6828_12};
 
 %%%% FIRST PLOT TIMESERIES
-legends = {'Easy Growth','Easy Templated Polymerisation'};%
+legends = {' \itp_p \rm= 0.01',' \itp_p \rm= 0.04', ' \itp_p \rm= 0.08', ' \itp_p \rm= 0.12'};%
 
-ax1 = nexttile([1 2]); %create tile that spams 1 row by 3 columns
+ax1 = nexttile([1 4]); %create tile that spams 1 row by 3 columns
 
 for j = 1:length(data)
 div_per_gen_reps = data{j}{1,1}; %use {1,1} if the data has been cleaned because there are many reps, {1,2} for smaller datasets
@@ -60,14 +60,14 @@ xlabel(['Time steps'],'Fontsize',20,'FontName', 'Times');
 hold on
 end
 xline(ax1,8000,'--','Color','red', 'LineWidth', 2); % add vertical line
-legend({'Easy Growth','Easy Templated Polymerisation'}, 'Fontsize', 20,'FontName', 'Times', 'Location', 'west');
+legend({' \itp_p \rm= 0.01',' \itp_p \rm= 0.04', ' \itp_p \rm= 0.08', ' \itp_p \rm= 0.12'}, 'Fontsize', 20,'FontName', 'Times', 'Location', 'west');
 xlim([0,10000-interval_for_moving_sum]);
 
 
 
 %% Plot heatmaps
 
-titles = {'Easy Growth','Easy Templated Polymerisation'};%{'p_p = 0.0025','p_p = 0.005', 'p_p = 0.01', 'p_p = 0.02'};%{'\gamma_{fix} < \gamma_t and |\alpha_{fix}| > |\alpha_t|','\gamma_{fix} > \gamma_t and |\alpha_{fix}| < |\alpha_t|'};%{'p_d = 0.0001', 'p_d = 0.001', 'p_d = 0.01'};
+titles = {' \itp_p \rm= 0.01',' \itp_p \rm= 0.04', ' \itp_p \rm= 0.08', ' \itp_p \rm= 0.12'};%{'p_p = 0.0025','p_p = 0.005', 'p_p = 0.01', 'p_p = 0.02'};%{'\gamma_{fix} < \gamma_t and |\alpha_{fix}| > |\alpha_t|','\gamma_{fix} > \gamma_t and |\alpha_{fix}| < |\alpha_t|'};%{'p_d = 0.0001', 'p_d = 0.001', 'p_d = 0.01'};
 snps = 4; %which snaptshot do I wanna look at?
 reps = 10; %how many reps are there in the data
 cell_matrix_size = 60;
